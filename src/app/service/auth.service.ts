@@ -23,7 +23,9 @@ export class AuthService {
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+    
+    //usar a url do heroku
+    return this.http.get<User>(`https://blogdogui.herokuapp.com/usuarios/${id}`)
   }
 
   logado() {
